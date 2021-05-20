@@ -91,7 +91,7 @@ insert into sestra(haljina,hlace,narukvica) values
 insert into svekar(bojaociju) values
 ('crvena');
 
-insert into zena(kratkamajica,jmbg,bojaociju,sestra) values
+insert into zena(kratkamajica,jmbag,bojaociju,sestra) values
 ('panakota',11111111111,'plava',1),
 ('crvena',22222222222,'zelena',1),
 ('narancasta',33333333333,'plava',1);
