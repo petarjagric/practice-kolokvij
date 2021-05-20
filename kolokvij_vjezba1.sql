@@ -86,20 +86,20 @@ alter table cura add foreign key (punac) references punac(sifra);
 
 
 insert into sestra(haljina,hlace,narukvica) values
-('zuta','crvena',1);
+('Missguided','Levi''s',1);
 
 insert into svekar(bojaociju) values
-('crvena');
+('zelena');
 
 insert into zena(kratkamajica,jmbag,bojaociju,sestra) values
-('panakota',11111111111,'plava',1),
-('crvena',22222222222,'zelena',1),
-('narancasta',33333333333,'plava',1);
+('Calvin Klein',11111111111,'smeda',1),
+('Under Armor',22222222222,'zelena',1),
+('GAP',33333333333,'plava',1);
 
 insert into muskarac(bojaociju,maraka,zena) values
-('smeda',232323232.34567,1),
-('plava',454545456.34567,1),
-('zelene',676767678.12345,1);
+('smeda',563245856.34567,1),
+('plava',735125601.34567,1),
+('zelene',645852179.12345,1);
 
 insert into sestra_svekar(sestra,svekar) values
 (1,1),
