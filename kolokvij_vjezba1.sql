@@ -38,7 +38,7 @@ create table mladic(
 	drugiputa datetime,
 	asocijalno bit,
 	ekstrovertno bit not null,
-	duskerica varchar(48) not null,
+	dukserica varchar(48) not null,
 	muskarac int
 );
 
@@ -111,5 +111,26 @@ select * from sestra;
 select * from svekar;
 select * from zena;
 select * from muskarac;
+
+insert into cura(novcica,gustoca,ogrlica) values
+(3654561623.55555,52156456456.123123,1);
+select * from cura;
+update cura set gustoca=15.77 where sifra=1;
+select * from cura;
+
+insert into mladic(suknja,kuna,ekstrovertno,dukserica) values
+('Mytheresa',45.56,1,'Pull&Bear'),
+('Levi''s',30.56,1,'OffWhite'),
+('Wrangler',9.11,1,'Jack&Jones'),
+('R13',6.69,1,'Maverick');
+select * from mladic;
+delete from mladic where kuna>15.78;
+select * from mladic;
+
+select * from zena;
+select * from zena where kratkamajica like '%ana%';
+
+
+
 
 
