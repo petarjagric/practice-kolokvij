@@ -79,3 +79,31 @@ alter table decko_zarucnica add foreign key (decko) references decko(sifra);
 alter table decko_zarucnica add foreign key (zarucnica) references zarucnica(sifra);
 
 
+insert into zarucnica(bojakose,lipa,indiferentno) values
+('zelena',69.420,2);
+
+
+insert into decko(asocijalno) values
+(3);
+
+insert into decko_zarucnica(decko,zarucnica) values
+(1,1),
+(1,1),
+(1,1);
+
+insert into cura(haljina,drugiputa,majica) values
+('tirkizna','2021-03-09','violet'),
+('crvena','2021-05-09','plava'),
+('roza','2021-04-09','crvena');
+
+insert into neprijatelj(haljina,modelnaocala,kuna) values
+('plava','zute',15.98),
+('crvena','narancasta',25.89),
+('crna','bijela',67.58);
+
+select * from zarucnica;
+select * from decko;
+select * from decko_zarucnica;
+select * from cura;
+select * from neprijatelj;
+
