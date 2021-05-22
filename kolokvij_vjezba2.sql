@@ -107,12 +107,14 @@ select * from decko_zarucnica;
 select * from cura;
 select * from neprijatelj;
 
+
 insert into svekar(ogrlica,asocijalno) values
 (1,1);
 insert into prijatelj(treciputa,ekstrovertno,svekar) values
 ('2001-10-02',1,1);
 update prijatelj set treciputa='2020-04-30';
 select * from prijatelj;
+
 
 insert into neprijatelj(haljina,modelnaocala,kuna) values
 ('zelena','crna',17.99),
@@ -127,6 +129,14 @@ delete from brat where ogrlica!=14;
 select * from brat;
 
 
+select * from cura;
+insert into cura(haljina,drugiputa,majica) values
+('bijela','2021-05-22','roza'),
+('crvena','2021-05-23','plava'),
+('crna','2021-05-22','tirkizna'),
+('smeda','2021-05-23','krem'),
+('plava','2021-05-24','crna');
 
+select * from cura where drugiputa is null;
 
 
