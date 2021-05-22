@@ -114,7 +114,17 @@ insert into prijatelj(treciputa,ekstrovertno,svekar) values
 update prijatelj set treciputa='2020-04-30';
 select * from prijatelj;
 
-
+insert into neprijatelj(haljina,modelnaocala,kuna) values
+('zelena','crna',17.99),
+('crvena','crvena',20.99),
+('plava','smeda',69.99);
+insert into brat(ogrlica,asocijalno,neprijatelj) values
+(23,1,1),
+(22,1,1),
+(14,1,1);
+select * from brat;
+delete from brat where ogrlica!=14;
+select * from brat;
 
 
 
