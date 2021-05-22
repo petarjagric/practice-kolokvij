@@ -48,10 +48,10 @@ create table decko_zarucnica(
 create table zarucnica(
 	sifra int not null primary key auto_increment,
 	narukvica int,
-	bojakosa varchar(37) not null,
+	bojakose varchar(37) not null,
 	novcica decimal(15,9),
 	lipa decimal(15,8) not null,
-	indiferetno bit not null
+	indiferentno bit not null
 );
 
 create table prijatelj(
@@ -80,7 +80,7 @@ alter table decko_zarucnica add foreign key (zarucnica) references zarucnica(sif
 
 
 insert into zarucnica(bojakose,lipa,indiferentno) values
-('zelena',69.420,2);
+('zelena',69.42,1);
 
 
 insert into decko(asocijalno) values
@@ -106,4 +106,17 @@ select * from decko;
 select * from decko_zarucnica;
 select * from cura;
 select * from neprijatelj;
+
+insert into svekar(ogrlica,asocijalno) values
+(1,1);
+insert into prijatelj(treciputa,ekstrovertno,svekar) values
+('2001-10-02',1,1);
+update prijatelj set treciputa='2020-04-30';
+select * from prijatelj;
+
+
+
+
+
+
 
