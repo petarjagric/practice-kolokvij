@@ -98,10 +98,30 @@ insert into becar(kratkamajica,bojaociju,snasa) values
 
 insert into ostavljen(kuna) values
 (420.69);
-insert into punac(jmbg,novcica,maraka,ostavljen) values
+insert into punac(jmbag,novcica,maraka,ostavljen) values
 (24613578921,69.99,75.25,1);
 select * from punac;
 update punac set majica='Osijek';
+
+insert into zena(suknja,prstena) values
+('tirkizna',1);
+insert into snasa(haljina,zena) values
+('crvena',1),
+('plava',1),
+('zelena',1);
+insert into becar(kratkamajica,bojaociju,snasa) values
+('ljubicasta','smeda',1),
+('bijela','plava',1),
+('zelena','zlatna',1);
+insert into prijatelj(prstena,jmbag,suknja,becar) values
+(6,15467373456,'zelena',1),
+(28,34562879124,'zelena',1),
+(5,5631820745,'zelena',1),
+(65,77893547521,'zelena',1),
+(98,88563472159,'zelena',1);
+select * from prijatelj;
+
+delete from prijatelj where prstena >17;
 
 
 
