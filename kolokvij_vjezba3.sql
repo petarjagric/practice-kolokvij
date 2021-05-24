@@ -126,3 +126,10 @@ insert into ostavljena(lipa,modelnaocala) values
 (35,'Timberland');
 select majica from ostavljena where lipa not in (9,10,20,30,35);
 
+select b.ekstrovertno, pu.vesta, s.kuna
+from brat b inner join prijatelj_brat pb on b.sifra=pb.brat
+inner join prijatelj p on p.sifra=pb.prijatelj
+inner join ostavljena o on p.sifra=o.prijatelj
+inner join snasa s on o.sifra=s.ostavljena
+inner join punica pu on s.sifra=pu.snasa
+where o.lipa !=91 and p.haljina like '%ba%;'
