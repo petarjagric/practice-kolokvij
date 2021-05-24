@@ -132,4 +132,9 @@ inner join prijatelj p on p.sifra=pb.prijatelj
 inner join ostavljena o on p.sifra=o.prijatelj
 inner join snasa s on o.sifra=s.ostavljena
 inner join punica pu on s.sifra=pu.snasa
-where o.lipa !=91 and p.haljina like '%ba%;'
+where o.lipa !=91 and p.haljina like '%ba%';
+
+select p.haljina, p.lipa 
+from prijatelj p
+where not exists
+(select * from prijatelj_brat pb where pb.prijatelj = p.sifra);
