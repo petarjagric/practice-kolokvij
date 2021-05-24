@@ -96,7 +96,12 @@ insert into becar(kratkamajica,bojaociju,snasa) values
 ('bijela','crvena',1),
 ('zuta','crna',1);
 
-
+insert into ostavljen(kuna) values
+(420.69);
+insert into punac(jmbg,novcica,maraka,ostavljen) values
+(24613578921,69.99,75.25,1);
+select * from punac;
+update punac set majica='Osijek';
 
 
 
