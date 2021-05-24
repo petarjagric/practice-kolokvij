@@ -16,7 +16,7 @@ create table punac(
 	jmbag char(11) not null,
 	novcica decimal(18,7) not null,
 	maraka decimal(12,6) not null,
-	ostaveljen int not null
+	ostavljen int not null
 );
 
 create table mladic(
@@ -67,5 +67,10 @@ create table prijatelj(
 	becar int not null
 );
 
-
+alter table punac add foreign key (ostavljen) references ostavljen(sifra);
+alter table zena_mladic add foreign key (mladic) references mladic(sifra);
+alter table zena_mladic add foreign key (zena) references zena(sifra);
+alter table snasa add foreign key (zena) references zena(sifra);
+alter table becar add foreign key (snasa) references snasa(sifra);
+alter table prijatelj add foreign key (becar) references becar(sifra);
 
