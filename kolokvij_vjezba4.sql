@@ -123,6 +123,17 @@ select * from prijatelj;
 
 delete from prijatelj where prstena >17;
 
+select * from snasa;
+
+select * from snasa where treciputa is null;
+
+select b.kratkamajica, p.jmbag, m.nausnica
+inner join mladic m inner join zena_mladic zm on m.sifra=zm.mladic
+inner join zena z on z.sifra=zm.zena
+inner join snasa s on z.sifra=s.zena
+inner join becar b on s.sifra=b.snasa
+inner join prijatelj p on b.sifra=p.becar
+where s.treciputa is not null and z.lipa!=29;
 
 
 
