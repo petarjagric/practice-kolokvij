@@ -135,5 +135,8 @@ inner join becar b on s.sifra=b.snasa
 inner join prijatelj p on b.sifra=p.becar
 where s.treciputa is not null and z.lipa!=29;
 
+select z.lipa, z.prstena 
+from zena z
+where not exists (select * from  zena_mladic zm where zm.zena=z.sifra);
 
 
