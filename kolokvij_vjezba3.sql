@@ -113,3 +113,16 @@ insert into punica(kuna,vesta) values
 select * from punica;
 
 delete from punica where kratkamajica='AB';
+
+insert into prijatelj(indiferentno) values
+(1);
+insert into ostavljena(lipa,modelnaocala) values
+(9,'Timberland'),
+(24,'Timberland'),
+(20,'Timberland'),
+(48,'Timberland'),
+(30,'Timberland'),
+(73,'Timberland'),
+(35,'Timberland');
+select majica from ostavljena where lipa not in (9,10,20,30,35);
+
