@@ -71,3 +71,10 @@ create table punica(
 	snasa int
 );
 
+alter table svekar add foreign key (cura) references cura(sifra);
+alter table prijatelj_brat add foreign key (brat) references brat(sifra);
+alter table prijatelj_brat add foreign key (prijatelj) references prijatelj(sifra);
+alter table ostavljena add foreign key (prijatelj) references prijatelj(sifra);
+alter table snasa add foreign key (ostavljen) references ostavljena(sifra);
+alter table punica add foreign key (snasa) references snasa(sifra);
+
