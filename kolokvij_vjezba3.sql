@@ -85,7 +85,7 @@ insert into ostavljena(modelnaocala) values
 ('Timberland');
 insert into snasa(kuna,eura,ostavljena) values
 (69.45,57.45,1);
-insert into brat(ogrlica,ekstroventno) values
+insert into brat(ogrlica,ekstrovertno) values
 (1,1);
 insert into prijatelj_brat(prijatelj,brat) values
 (1,1);
@@ -96,4 +96,20 @@ select * from snasa;
 select * from brat;
 select * from prijatelj_brat;
 
+insert into cura(ogrlica) values
+(1);
+insert into svekar(novcica,suknja,narukvica,cura) values
+(42.69,'plava',1,1);
+select * from svekar;
 
+update svekar set suknja='Osijek';
+
+insert into ostavljena(modelnaocala) values
+('Timberland');
+insert into snasa(kuna,eura,ostavljena) values
+(100.99,72.99,1);
+insert into punica(kuna,vesta) values
+(125.99,'Techwear');
+select * from punica;
+
+delete from punica where kratkamajica='AB';
